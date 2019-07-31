@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="W4n-7j-pDL">
-                                <rect key="frame" x="147.66666666666666" y="40" width="118.99999999999997" height="20"/>
+                                <rect key="frame" x="199" y="40" width="16" height="16"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdz-j2-gxi">
-                                <rect key="frame" x="57.666666666666657" y="145" width="299" height="82"/>
+                                <rect key="frame" x="57.666666666666657" y="141" width="299" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="299" id="oMD-Xx-50G"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finf a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWa-WN-luf">
-                                <rect key="frame" x="57.666666666666657" y="279" width="299" height="143"/>
+                                <rect key="frame" x="57.666666666666657" y="275" width="299" height="143"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="143" id="VVG-LX-Osh"/>
                                 </constraints>
@@ -89,19 +89,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="Gjr-KC-mFd" id="ZkE-nH-0pt"/>
-                        <outlet property="swoosh" destination="W4n-7j-pDL" id="JZs-rp-gd0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.5" y="112.49999999999999"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="Lhx-qs-R8h">
             <objects>
-                <viewController id="svV-Gq-W6K" sceneMemberID="viewController">
+                <viewController id="svV-Gq-W6K" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UP9-R0-2Fl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,6 +171,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="svV-Gq-W6K" eventType="touchUpInside" id="8Zt-GG-bgf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-q6-z5i">
                                 <rect key="frame" x="0.0" y="30" width="70" height="32"/>
@@ -211,16 +210,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zKc-Cs-nWI"/>
                     </view>
+                    <connections>
+                        <segue destination="RNY-22-wnW" kind="show" identifier="skilVCSegue" id="5gQ-zf-Ouu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8V-Bq-rPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6N7-pf-lIg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="116.57608695652175"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="MOA-VZ-jjg">
             <objects>
-                <viewController id="RNY-22-wnW" sceneMemberID="viewController">
+                <viewController id="RNY-22-wnW" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="87F-7d-GjR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,6 +284,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="RNY-22-wnW" eventType="touchUpInside" id="Ofu-qD-D79"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
